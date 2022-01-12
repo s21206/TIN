@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+#content {
+    display: grid;
+    grid-template-areas:
+    "header header header header header"
+    "gallery column1 column2 column3 column4"
+    "footer footer footer footer footer";
+    grid-gap: 10px;
+}
+
+.gallery { grid-area: gallery; }
+.header { grid-area: header; }
+.item1 { grid-area: column1; }
+.item2 { grid-area: column2; }
+.item3 { grid-area: column3; }
+.item4 { grid-area: column4; }
+.footer { grid-area: footer; }
+
+header > img {
+    transform: rotate(5deg);
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 black;
+    border: 2px solid black;
+    border-top: 0;
+    border-left: 0;
+}
+
+#content > div, #content > header {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+
+#content > header p {
+    text-align: center;
+    font-size: 24px;
+}
+
+#content > div {
+    padding: 14px;
+}
+#content > div p {
+    margin: 0;
+    text-align: justify !important;
+}
+
+.gallery img {
+    max-width: 250px;
+}
+
+.gallery figure {
+    margin: 0 0 50px 0;
+}
+
+img.left {
+    margin-right: 10px;
+    float: left;
+}
+
+img.right {
+    margin-left: 10px;
+    float: right;
+}
+
+img.small {
+    max-width: 100px;
+}
+
+div.left {
+    margin: 10px 10px 10px 0;
+    float: left;
+}
+
+div.right {
+    margin: 10px 0 10px 10px;
+    float: right;
+}
+
+.quotes {
+    color: #EB4C42;
+    font-style: italic;
+    font-size: medium;
+    text-align: justify !important;
+}
+
+
+@media all and (max-width: 1200px) {
+    #content {
+        grid-template-areas:
+        "header header header header header"
+        "gallery gallery column1 column2 column3"
+        "gallery gallery column4 column4 column4"
+        "footer footer footer footer footer";
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #content {
+        grid-template-areas:
+        "header header header header header header"
+        "column1 column1 column1 column2 column2 column2"
+        "column3 column3 column3 column4 column4 column4"
+        "gallery gallery gallery gallery gallery gallery"
+        "footer footer footer footer footer footer";
+    }
+}
+
+@media all and (max-width: 800px) {
+    #content {
+        grid-template-areas:
+        "header header header header header"
+        "column1 column1 column1 column1 column1"
+        "column2 column2 column2 column2 column2"
+        "column3 column3 column3 column3 column3"
+        "column4 column4 column4 column4 column4"
+        "gallery gallery gallery gallery gallery"
+        "footer footer footer footer footer";
+    }
+}
+</style>
+
+    <title> Lab 3 </title>
+</head>
+<body>
+
+    <div id="content">
+        <header class="header">
+            <img src="cats.jpg" alt="banner">
+            <p>Funny cats</p>
+        </header>
+        <div class="gallery">
+            <figure>
+                <img src="pic1.jpeg"
+                     alt="cat1">
+                <figcaption>Cat 1</figcaption>
+            </figure>
+            <figure>
+                <img src="pic2.jpg"
+                     alt="cat2">
+                <figcaption>Cat 2</figcaption>
+            </figure>
+            <figure>
+                <img src="pic3.jpg"
+                     alt="cat3">
+                <figcaption>Cat 3</figcaption>
+            </figure>
+	    <figure>
+                <img src="pic4.jpg"
+                     alt="cat4">
+                <figcaption>Cat 4</figcaption>
+            </figure>
+        </div>
+        <div class="p1">
+            <p>
+               	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod urna sit amet nisl dapibus eleifend. Maecenas mollis volutpat auctor. Aliquam sed lectus dictum, euismod nunc nec, efficitur augue. Fusce sed diam 			quis nulla hendrerit pretium at vel lacus. In nec lorem et eros dictum accumsan. Nulla facilisi. Pellentesque ac sodales eros.
+            </p>
+            <div class="quotes left">Fusce sed diam quis nulla hendrerit</div>
+            <br>
+            <p>
+                Proin ac nisl sed odio ultrices interdum a sed mi. In quis sem quis diam bibendum ullamcorper sed id purus. Maecenas ac eros vitae mi ullamcorper feugiat ac a augue. Sed fermentum sagittis ex, sit amet ullamcorper ipsum 			ornare quis. Sed blandit sodales justo non pharetra. Vivamus dui tellus, finibus sit amet ipsum quis, ultricies pretium orci. Suspendisse faucibus ligula justo, ac pulvinar quam semper sit amet. Vestibulum ultrices nisl 			non eros posuere, quis pulvinar purus faucibus. Mauris eu pellentesque quam. Pellentesque convallis convallis pellentesque. Proin eu ex arcu.
+            </p>
+        </div>
+        <div class="p2">
+            <p>
+                Aliquam a nulla id lacus vehicula varius. Praesent at erat id diam ornare interdum. Praesent a tincidunt sapien, sit amet accumsan lectus. Pellentesque arcu magna, suscipit vel elementum at, malesuada vitae diam. 		Curabitur at lacus eleifend, sodales tellus sit amet, pellentesque ex. Nam ac velit vestibulum, interdum metus id, aliquam quam. Praesent sem nulla, dictum nec cursus sit amet, euismod ac mi. Sed in faucibus dui.
+            </p>
+            <br>
+            <img src="pic5.jpg" alt="" class="small left">
+            <p>
+                Quisque pulvinar pretium justo et egestas. Ut vestibulum orci et elit maximus, non malesuada tortor consequat. Maecenas porttitor vulputate aliquam. Sed sodales neque imperdiet mi tincidunt, sit amet elementum nulla 		pulvinar. Sed in pellentesque urna. Praesent vehicula massa nec justo tristique, vel commodo magna dictum. Mauris in turpis in velit aliquam euismod et nec purus. Nam justo erat, pharetra ac auctor sit amet, ornare et 		massa. Suspendisse accumsan, libero in condimentum lobortis, dolor erat fermentum nisl, sit amet molestie leo nunc vel felis. Quisque fermentum aliquam ligula, sed auctor ante vehicula lobortis. Cras molestie, risus ac 		tristique condimentum, nulla est consequat enim, eu venenatis ante risus vitae lectus. Fusce eleifend varius luctus. Vivamus lorem tellus, ultrices non cursus at, egestas quis lectus. Donec pellentesque nibh gravida diam 		semper maximus.
+            </p>
+        </div>
+        <div class="p3">
+            <div class="quotes left">Meow</div>
+            <p>
+                Donec ornare augue tempus dictum ornare. Nulla vehicula nibh quis felis aliquet elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent consequat volutpat lectus, vitae rutrum quam facilisis sed. 		Quisque tempus, dolor sit amet maximus hendrerit, justo lorem luctus lectus, in hendrerit ligula turpis vitae turpis. Ut fringilla nibh vel urna tincidunt egestas. Cras scelerisque aliquam sagittis. In vel augue tortor. 		Pellentesque eget nisl convallis, pretium dui sed, laoreet sapien. Vivamus dictum fringilla eleifend. Duis porttitor augue non erat tempus, ut aliquam sem luctus. Vivamus viverra nec quam quis egestas. Donec iaculis, 		lectus ac ultricies varius, ante nisi consectetur elit, non hendrerit lacus nunc eu est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis commodo augue, elementum bibendum ante. Quisque at consequat sem, 		nec malesuada nisi.
+            </p>
+            <br>
+            <p>
+                Pellentesque dignissim nec tellus sit amet elementum. Quisque condimentum blandit magna non interdum. Proin elit libero, ultricies et aliquet ut, interdum non ante. Integer semper posuere ex, eget elementum nisi imperdiet 		id. Vestibulum rhoncus luctus erat, sed condimentum ipsum malesuada quis. Nulla porta laoreet ante, sed aliquam quam ultrices eget. Sed consectetur vestibulum nisl, rhoncus blandit tellus convallis sit amet. Vivamus 		interdum vitae arcu ut finibus. Etiam nunc quam, blandit non facilisis ac, hendrerit sed massa. Morbi non felis at augue vestibulum luctus ut non ante. Phasellus fringilla rhoncus pretium. Sed fermentum pulvinar mi, ac 		sagittis augue dignissim non. Donec id urna eu odio tincidunt venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis in tristique justo. Sed varius quis nisi ut 		scelerisque.
+            </p>
+        </div>
+        <div class="p4">
+            <p>
+                Proin ut velit vehicula, egestas turpis a, molestie urna. Sed eleifend ipsum scelerisque diam suscipit, scelerisque euismod tortor cursus. Fusce tempus risus turpis, ac tempus mi hendrerit ut. Maecenas sollicitudin orci a 		metus feugiat, ac dapibus sem molestie. Proin iaculis, diam ut ultricies eleifend, eros massa porttitor neque, nec varius mi nulla quis nibh. Nunc sed elit lorem. Nullam dapibus mauris risus, at dictum purus lacinia ut. 		Vivamus dictum non ex sit amet fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras rhoncus purus quis urna rhoncus, a dictum enim maximus. Nullam congue porta ullamcorper. In sed arcu quis nunc 		accumsan ultrices. Integer maximus volutpat ligula nec pretium.
+            </p>
+            <div class="quotes left">Some text</div>
+            <br>
+            <p>
+                Donec quis purus a eros ullamcorper commodo. Sed eu laoreet ante. Etiam mollis, odio et dictum interdum, libero dui faucibus enim, volutpat vulputate nibh lacus sed lorem. Nunc a tristique leo. Mauris non elit mollis, 		venenatis nisl at, dapibus nisi. Mauris pulvinar libero egestas, accumsan magna a, pulvinar elit. Donec quis metus sit amet quam euismod iaculis non ac justo. Praesent eget dapibus odio. Donec eleifend, turpis eu 		ullamcorper commodo, lorem nibh sollicitudin leo, a feugiat nulla nisl sed dolor. Suspendisse vitae rhoncus augue. Praesent elementum, justo quis molestie scelerisque, diam elit ullamcorper leo, ut elementum elit arcu id 		metus. Aliquam ut augue non justo consequat scelerisque. Maecenas suscipit pharetra odio, non ullamcorper purus bibendum non. Aliquam at quam placerat, placerat dui quis, cursus nisi.
+            </p>
+        </div>
+        <div class="footer">Have a nice day!</div>
+    </div>
+</body>
+</html>
