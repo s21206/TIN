@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<title> lab2 </title>
+<style>
+form {
+font-size: 34px;
+font-style: italic
+}
+
+input[type="text"] {
+border-color: green;
+}
+
+input[type="password"] {
+border-color: red;
+}
+
+</style>
+
+</head>
+
+<body>
+<form> 
+name:
+<input type="text" name="firstname" id="firstname"/> <br/> 
+last name:
+<input type="text" name="lastname" id="lastname"/> <br/>
+password:
+<input type="password" name="password" id="password"/> <br/>
+
+<input type="checkbox" value= "true" name= "checkbox" />I'm checkbox
+
+<p>Please select your preferred contact method:</p>
+  <div>
+    <input type="radio" id="choice1"
+     name="choice" value="choice1">
+    <label for="Choice1">choice1</label> 
+
+    <input type="radio" id="choice2"
+     name="choice" value="choice2">
+    <label for="Choice2">choice2</label>
+
+    <input type="radio" id="choice3"
+     name="choice" value="choice3">
+    <label for="Choice3">choice3</label>
+  </div> <br/>
+
+<select name="phones">
+<option value="samsung">Samsung</option>
+<option value="iphone">Iphone</option>
+<option value="huawei">Huawei</option>
+</select> <br/>
+
+<textarea rows="3" cols="10"> enter text</textarea> <br/>
+<input type="submit" name="submit" value= "submit" />
+<input type="reset" name="reset" value= "reset" />
+</form>
+
+
+
+
+
+
+</body>
+
+</html>
