@@ -1,0 +1,28 @@
+function check_Palindrome(str){
+   var str = str.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
+	var count = 0;
+	if(str==="") {
+		console.log("Nothing found!");
+		return false;
+	}
+	if ((str.length) % 2 === 0) {
+		count = (str.length) / 2;
+	} else {
+		if (str.length === 1) {
+			console.log("is a palindrome.");
+			return true;
+		} else {
+			count = (str.length - 1) / 2;
+		}
+	}
+	for (var x = 0; x < count; x++) {
+		if (str[x] != str.slice(-1-x)[0]) {
+			console.log("is not a palindrome");
+			return false;
+		}
+	}
+	console.log("is a palindrome.");
+	return true;
+}
+check_Palindrome('woow');
+check_Palindrome('cat');
