@@ -1,0 +1,17 @@
+var person = {
+  name: "Sarah",
+  age: 20,
+  gender: "female"
+};
+
+person.talk = function(){
+ console.log("I'm a student");
+ }
+
+person.getName = function(){
+ console.log("My name is " + person.name);
+ }
+ 
+const props = Object.getOwnPropertyNames(person);
+
+console.log(props);

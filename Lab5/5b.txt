@@ -1,0 +1,17 @@
+function student(name, surname, id, grades)
+   {
+     this.name = name;
+     this.surname = surname;
+     this.id = id;
+     this.grades = grades;
+      
+   }
+
+student.prototype.display = function() {
+   const average = (array) => array.reduce((a, b) => a + b) / array.length;
+     console.log(this.name +" "+ this.surname + " "+ average(this.grades));
+};
+
+var stu1 = new student("John", "Wick", 1, [1, 2, 3, 5]);
+
+stu1.display();
