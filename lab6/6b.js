@@ -1,0 +1,3 @@
+setTimeout(function(){
+   document.getElementById("p").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus neque purus, nec blandit neque blandit non. Cras convallis enim libero, eget consequat mi maximus sed. Integer tempus facilisis tristique. Nam non semper erat, vitae posuere dui. Ut sed tincidunt justo. Sed est magna, vehicula vel arcu vitae, vehicula ultricies nulla. Nullam eu sapien consequat, feugiat eros et, vestibulum ex. Aenean tincidunt lacus et magna mattis porttitor. Ut lacinia risus ut elit efficitur porttitor. Morbi scelerisque ligula leo, sed consequat ligula sagittis sed."; 
+}, 5000);
