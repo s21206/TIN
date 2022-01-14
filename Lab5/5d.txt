@@ -1,0 +1,38 @@
+function student(name, surname, id, grades)
+   {
+     this.name = name;
+     this.surname = surname;
+     this.id = id;
+     this.grades = grades;
+
+  Object.defineProperty(this, "setFullName", {
+      set: function(name) {
+      var words = name.split(" ");
+        this.name = words[0];
+        this.surname = words[1];
+      }
+    }),
+
+  Object.defineProperty(this, "getFullName", {
+      get: function() {
+        return this.name + " " + this.surname;
+      }
+    }),
+
+  Object.defineProperty(this, "getAvg", {
+      get: function() {
+        var sum = 0;
+    for(var i in this.grades){
+      sum += this.grades[i];
+    }
+    return sum/this.grades.length;
+      }
+    })
+}
+
+var stu1 = new student("John", "Wick", 1, [1, 2, 3, 5]);
+
+console.log(stu1.getFullName +  stu1.getAvg);
+stu1.setFullName = "Elon Musk";
+
+console.log(stu1.getFullName +  stu1.getAvg);

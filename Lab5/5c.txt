@@ -1,0 +1,18 @@
+var student_proto = {
+  name: "Yehor",
+  surname: "Martynenko",
+  id: 21206,
+  courses: new Array("course1", "course2", "course13")
+}
+
+function student_obj(name, surname, id){
+  var student = Object.create(student_proto);
+  student.name = name;
+  student.surname = surname;
+  student.id = id;
+  return student;
+}
+
+var student = student_obj("John", "Wick", 2121);
+
+console.log(student.name +" " + student.surname + " " + student.courses);

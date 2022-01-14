@@ -1,0 +1,37 @@
+class Person{
+  constructor(name, surname){
+    this.name = name;
+    this.surname = surname;
+  }
+  set setFullName(new_name) {
+    this.name = new_name.split(" ")[0];
+    this.surname = new_name.split(" ")[1];
+  }
+
+  get getFullName() {
+    return this.name + " " + this.surname;
+  }
+}
+
+class Student extends Person{
+constructor(name, surname, id, grades){
+  super(name,surname),
+  this.id = id,
+  this.grades = grades
+}
+      get getAvg() {
+        var sum = 0;
+    for(var i in this.grades){
+      sum += this.grades[i];
+    }
+    return sum/this.grades.length;
+      }
+   }
+
+var stu1 = new Student("John", "Wick", 1, [1, 2, 3, 5]);
+
+console.log(stu1.getFullName +" "+ stu1.getAvg);
+
+stu1.setFullName = "Elon Musk";
+
+console.log(stu1.getFullName +" "+ stu1.getAvg);

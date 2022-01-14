@@ -1,0 +1,24 @@
+function student(name, surname, id, grades)
+   {
+     this.name = name;
+     this.surname = surname;
+     this.id = id;
+     this.grades = grades;
+      
+    this.avg = function(){
+		var sum = 0;
+    for(var i in this.grades){
+      sum += this.grades[i];
+    }
+    return sum/this.grades.length;
+  }
+  
+  this.getFullName = function(){
+  return this.name + " " + this.surname;
+  }
+   }
+
+
+var stu1 = new student("John", "Wick", 1, [1, 2, 3, 5]);
+
+console.log(stu1.getFullName() + " " + stu1.avg());

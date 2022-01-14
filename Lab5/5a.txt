@@ -1,0 +1,14 @@
+var person = {
+  name: "Sarah",
+  age: 20,
+  gender: "female",
+  talk : function() {
+    console.log("I'm a student");
+  },
+  getName : function() {
+    console.log("My name is " + person.name);
+    }
+  };
+
+person.talk();
+person.getName();
